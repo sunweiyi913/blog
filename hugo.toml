@@ -1,0 +1,83 @@
+baseURL = 'https://blog.example.com/'   # TODO: 替换为你的自定义域名
+title = 'Ve 的博客'
+theme = 'PaperMod'
+defaultContentLanguage = 'zh'
+locale = 'zh-CN'
+timeZone = 'Asia/Shanghai'
+paginate = 10
+enableRobotsTXT = true
+enableEmoji = true
+summaryLength = 70
+
+[minify]
+  disableXML = true
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']   # JSON 输出供站内搜索使用
+
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+  series = 'series'
+
+[languages.zh]
+  contentDir = 'content/zh'
+  label = '中文'
+  weight = 1
+
+[params]
+  env = 'production'
+  title = 'Ve 的博客'
+  description = 'Ve 的个人技术博客 —— 记录云原生、DevOps 与编程实践'
+  author = 'Ve'
+  DateFormat = '2006-01-02'
+  defaultTheme = 'auto'          # auto / light / dark
+  ShowReadingTime = true
+  ShowWordCount = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  mainSections = ['posts']
+  hideSummary = false
+
+  [params.homeInfoParams]
+    Title = '你好，我是 Ve 👋'
+    Content = """
+欢迎来到我的博客，这里记录云原生、DevOps 与编程实践。\n
+- ✍️ 像写代码一样写博客：VS Code + Git + Hugo
+- 🚀 推送即发布：GitHub → Cloudflare Pages 全自动
+    """
+
+  [[menu.main]]
+    name = '文章'
+    url = '/posts/'
+    weight = 1
+
+  [[menu.main]]
+    name = '归档'
+    url = '/archives/'
+    weight = 2
+
+  [[menu.main]]
+    name = '标签'
+    url = '/tags/'
+    weight = 3
+
+  [[menu.main]]
+    name = '搜索'
+    url = '/search/'
+    weight = 4
+
+  [[menu.main]]
+    name = '关于'
+    url = '/about/'
+    weight = 5
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+  [markup.goldmark.renderer]
+    unsafe = true   # 允许 Markdown 中的原生 HTML

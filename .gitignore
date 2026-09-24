@@ -1,0 +1,11 @@
+# Hugo
+/public/
+/resources/
+.hugo_build.lock
+
+# OS / 编辑器
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
